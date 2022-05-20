@@ -1,5 +1,6 @@
 import { client } from "../../libs/client";
 import styles from '../../styles/Home.module.scss';
+import { ChakraProvider } from '@chakra-ui/react';
 
 
 export default function BlogId({ blog }) {
@@ -7,7 +8,7 @@ export default function BlogId({ blog }) {
     <main className={styles.main}>
       <h1 className={styles.title}>{blog.title}</h1>
       <p className={styles.publishedAt}>{blog.publishedAt}</p>
-
+      <p className="category">{blog.category && `${blog.category.name}`}</p>
       <div 
         dangerouslySetInnerHTML={{
         __html: `${blog.content}`,
@@ -35,3 +36,4 @@ export const getStaticProps = async (context) => {
     },
   };
 };
+
