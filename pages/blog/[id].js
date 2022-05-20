@@ -1,6 +1,5 @@
 import { client } from "../../libs/client";
-import styles from '../../styles/Home.module.scss';
-import { ChakraProvider } from '@chakra-ui/react';
+import styles from '../../styles/Home.module.scss'
 
 
 export default function BlogId({ blog }) {
